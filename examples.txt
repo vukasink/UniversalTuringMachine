@@ -1,0 +1,56 @@
+TM that decides wheather the input 00..00 is a length of 2^n.
+(From the book "Introduction to the Theory of Computation" by
+Michael Sipser)
+
+Set of states: {q1,q2,q3,q4,q5,qa,qr}
+Accepting state: qa
+Rejecting state: qr
+Tape alphabet: {0,x,_}
+Blank symbol: _
+Rules:
+(q1,0,q2,_,R)
+(q1,x,qr,x,R)
+(q1,_,qr,_,R)
+(q2,0,q3,x,R)
+(q2,x,q2,x,R)
+(q2,_,qa,_,R)
+(q3,0,q4,0,R)
+(q3,x,q3,x,R)
+(q3,_,q5,_,L)
+(q4,0,q3,x,R)
+(q4,x,q4,x,R)
+(q4,_,qr,_,R)
+(q5,0,q5,0,L)
+(q5,x,q5,x,L)
+(q5,_,q2,_,R)
+
+Starting state: q1
+Arbitrary input.
+
+_______________________________________________________________
+
+5-state, 2-symbol probable Busy Beaver.
+(From the Wikipedia)
+
+Set of states: {A, B, C, D, E, H}
+Accepting & rejecting state : H
+Tape alphabet : {0,1}
+Blank symbol : 0
+Rules:
+(A,0,B,1,R)
+(A,1,C,1,L)
+(B,0,C,1,R)
+(B,1,B,1,R)
+(C,0,D,1,R)
+(C,1,E,0,L)
+(D,0,A,1,L)
+(D,1,D,1,L)
+(E,1,A,0,L)
+(E,0,H,1,R)
+
+Starting state: A
+Input: blank tape
+
+There is a picture in a repository of a sample execution
+of this Turing Machine. This machine in very interesting
+because it runs in more than 47 milions steps.

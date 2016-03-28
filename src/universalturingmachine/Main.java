@@ -63,7 +63,6 @@ public class Main {
     
     public static void main(String[] args) throws InterruptedException, IOException{
         
-        System.out.println("");
         System.out.println("Welcome to the Turing Machine simulator! \n");
         Scanner sc = new Scanner(System.in);
         

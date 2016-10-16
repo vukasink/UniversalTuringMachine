@@ -53,4 +53,4 @@ Input: blank tape
 
 There is a picture in a repository of a sample execution
 of this Turing Machine. This machine in very interesting
-because it runs in more than 47 milions steps.
+because it terminates after more than 47 milions steps.
